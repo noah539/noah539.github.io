@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Die Rezepte</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="top-nav">
+        <a href="index.html" class="back-link">&larr; Zurück zur Startseite</a>
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="pfannkuchen">Omas Pfannkuchen</button>
+            <button class="tab-btn" data-tab="tafelspitz">Tafelspitz mit Meerrettich</button>
+        </div>
+    </nav>
+
+    <main class="container recipe-container">
+        <article id="pfannkuchen" class="recipe-section active">
+            <h1>Leckere Pfannkuchen wie bei Oma</h1>
+            <div class="content-split">
+                <div class="ingredients">
+                    <h3>Zutaten</h3>
+                    <ul>
+                        <li>250g Mehl</li>
+                        <li>500ml Milch</li>
+                        <li>4 Eier</li>
+                        <li>1 Prise Salz</li>
+                        <li>2 EL Zucker</li>
+                        <li>Butter für die Pfanne</li>
+                    </ul>
+                </div>
+                <div class="instructions">
+                    <h3>Zubereitung</h3>
+                    <ol>
+                        <li>Mehl, Milch, Salz und Zucker in einer Schüssel zu einem glatten Teig verrühren.</li>
+                        <li>Die Eier einzeln unterrühren, bis alles gut vermischt ist. Den Teig 10 Minuten ruhen lassen.</li>
+                        <li>Etwas Butter in einer beschichteten Pfanne erhitzen.</li>
+                        <li>Eine Schöpfkelle Teig in die Pfanne geben und gleichmäßig verlaufen lassen.</li>
+                        <li>Von beiden Seiten goldbraun backen. Am besten mit Apfelmus oder Zimt und Zucker servieren!</li>
+                    </ol>
+                </div>
+            </div>
+        </article>
+
+        <article id="tafelspitz" class="recipe-section">
+            <h1>Tafelspitz mit Meerrettichsauce und Bandnudeln</h1>
+            <div class="content-split">
+                <div class="ingredients">
+                    <h3>Zutaten</h3>
+                    <ul>
+                        <li>1 kg Tafelspitz (Rind)</li>
+                        <li>Suppengrün (Karotten, Sellerie, Lauch)</li>
+                        <li>1 Zwiebel (halbiert & geröstet)</li>
+                        <li>500g Bandnudeln</li>
+                        <li>2 EL Butter & 2 EL Mehl (für die Mehlschwitze)</li>
+                        <li>3-4 EL frisch geriebener Meerrettich</li>
+                        <li>Schuss Sahne, Salz, Pfeffer, Prise Zucker</li>
+                    </ul>
+                </div>
+                <div class="instructions">
+                    <h3>Zubereitung</h3>
+                    <ol>
+                        <li>Wasser aufkochen, Tafelspitz hineingeben und aufkochen lassen. Schaum abschöpfen. Suppengrün und Zwiebel hinzufügen. Bei schwacher Hitze ca. 2-2,5 Stunden weich köcheln.</li>
+                        <li>Bandnudeln nach Packungsanweisung in Salzwasser al dente kochen.</li>
+                        <li>Für die Sauce Butter schmelzen, Mehl einrühren (Mehlschwitze). Mit ca. 400ml der entstandenen Rinderbrühe ablöschen.</li>
+                        <li>Meerrettich und Sahne einrühren. Mit Salz, Pfeffer und einer Prise Zucker abschmecken. Nicht mehr kochen lassen!</li>
+                        <li>Fleisch in Scheiben schneiden, mit Nudeln und ordentlich Sauce servieren.</li>
+                    </ol>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

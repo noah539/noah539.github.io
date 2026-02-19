@@ -1,0 +1,212 @@
+:root {
+    /* Dunkelgrüne Farbpalette */
+    --primary-color: #66bb6a; /* Leuchtendes Grün für Buttons und Akzente */
+    --primary-dark: #81c784; /* Etwas helleres Grün für Hover-Effekte */
+    --bg-color: #0b170e; /* Sehr dunkles, tiefes Tannengrün als Hintergrund */
+    --text-color: #e8f5e9; /* Helles, weiches Grün-Weiß für den Text */
+    --card-bg: #142818; /* Etwas helleres Dunkelgrün für die Karten */
+    --hover-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Kräftiger Schatten */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Header & Hero */
+.hero {
+    text-align: center;
+    padding: 4rem 1rem;
+    /* Ein eleganter, dunkler Farbverlauf */
+    background: linear-gradient(135deg, #0a240c 0%, #1b5e20 100%);
+    color: #ffffff;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+    border-bottom: 2px solid #2e7d32;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Cards (Startseite) */
+.recipe-grid {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: -2rem;
+}
+
+.recipe-card {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    text-decoration: none;
+    color: var(--text-color);
+    width: 45%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    border: 1px solid #1f3d25;
+}
+
+.recipe-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--hover-shadow);
+    border-color: var(--primary-color);
+}
+
+.card-content {
+    padding: 2rem;
+}
+
+.card-content h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1.5rem;
+    color: var(--primary-color);
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+.recipe-card:hover .btn {
+    color: var(--primary-dark);
+}
+
+/* Navigation & Tabs (Rezeptseite) */
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--card-bg);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid #1f3d25;
+}
+
+.back-link {
+    text-decoration: none;
+    color: #aed581; /* Helles Grün für den Link */
+    font-weight: 500;
+}
+
+.back-link:hover {
+    color: var(--primary-color);
+}
+
+.tabs {
+    display: flex;
+    gap: 1rem;
+}
+
+.tab-btn {
+    border: none;
+    background: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    color: #7c9e80; /* Gedämpftes Grün für inaktive Tabs */
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s;
+}
+
+.tab-btn:hover {
+    color: var(--text-color);
+}
+
+.tab-btn.active {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+}
+
+/* Recipe Content */
+.recipe-section {
+    display: none;
+    animation: fadeIn 0.4s ease;
+}
+
+.recipe-section.active {
+    display: block;
+}
+
+.recipe-section h1 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+}
+
+.content-split {
+    display: flex;
+    gap: 3rem;
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    border: 1px solid #1f3d25;
+}
+
+.ingredients {
+    flex: 1;
+    background: #0f1f13; /* Noch dunklerer Kasten für die Zutaten */
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #1b5e20;
+}
+
+.ingredients h3 {
+    color: var(--primary-color);
+}
+
+.ingredients ul {
+    list-style-position: inside;
+    margin-top: 1rem;
+}
+
+.instructions {
+    flex: 2;
+}
+
+.instructions h3 {
+    color: var(--primary-color);
+}
+
+.instructions ol {
+    margin-top: 1rem;
+    padding-left: 1.5rem;
+}
+
+.instructions li {
+    margin-bottom: 1rem;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+    .recipe-grid, .content-split {
+        flex-direction: column;
+    }
+    .recipe-card {
+        width: 100%;
+    }
+}
