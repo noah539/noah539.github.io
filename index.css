@@ -1,0 +1,125 @@
+/* Grundlegende Zurücksetzung für ein einheitliches Design */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    /* ÄNDERUNG: Statt eines Fotos nun ein schöner, moderner grüner Farbverlauf.
+       Er geht von einem weicheren Mintgrün zu einem tieferen Waldgrün.
+    */
+    background: linear-gradient(135deg, #74c69d 0%, #1b4332 100%);
+    
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #1b4332; /* Dunkles, edles Grün für den Text */
+}
+
+/* Die milchige, moderne Karte im Glassmorphism-Stil */
+.container {
+    /* Wir machen den Hintergrund etwas transparenter, damit der neue grüne Verlauf besser durchscheint */
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 20px;
+    padding: 40px 20px;
+    max-width: 800px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(0, 50, 0, 0.2); /* Schatten leicht grünlich angepasst */
+}
+
+.floral-icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    letter-spacing: 5px;
+    /* Da das Hintergrundbild weg ist, betonen wir die Icons etwas mehr */
+    text-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.bottom-icon {
+    margin-top: 30px;
+    margin-bottom: 0;
+    font-size: 1.5rem;
+}
+
+h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 4rem;
+    color: #1b4332; /* Etwas dunkler für besseren Kontrast */
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin-bottom: 30px;
+    color: #2d6a4f;
+}
+
+/* Flexbox für ein responsives Layout der Zähler-Boxen */
+.counter-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Die einzelnen Zeit-Blöcke */
+.time-box {
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(116, 198, 157, 0.4);
+    border-radius: 15px;
+    padding: 15px;
+    min-width: 90px;
+    flex: 1 1 90px;
+    max-width: 120px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.time-box:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.85);
+}
+
+.number {
+    display: block;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #1b4332;
+}
+
+.label {
+    display: block;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #2d6a4f;
+    margin-top: 5px;
+}
+
+/* Smartphone-Anpassungen */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 3rem;
+    }
+    .container {
+        padding: 30px 15px;
+    }
+    .time-box {
+        min-width: 75px;
+        padding: 10px;
+    }
+    .number {
+        font-size: 1.5rem;
+    }
+    .label {
+        font-size: 0.7rem;
+    }
+}
