@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meine GitHub Page</title>
+    <style>
+        /* Grundlegende Einstellungen und animierter Hintergrund */
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            color: #ffffff;
+            /* Der animierte Farbverlauf */
+            background: linear-gradient(45deg, #12c2e9, #c471ed, #f64f59);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            text-align: center;
+        }
+
+        /* Animation für den Hintergrund */
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Glassmorphism-Container */
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 50px;
+            border-radius: 20px;
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            max-width: 600px;
+        }
+
+        h1 {
+            margin: 0 0 15px 0;
+            font-size: 3em;
+            letter-spacing: 2px;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin: 0 0 30px 0;
+            line-height: 1.5;
+            opacity: 0.9;
+        }
+
+        /* Ein cooler Hover-Button */
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            color: #fff;
+            text-decoration: none;
+            border: 2px solid white;
+            border-radius: 50px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.9em;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background: white;
+            color: #c471ed;
+            box-shadow: 0 0 20px rgba(255,255,255,0.6);
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Hallo Welt! 🚀</h1>
+        <p>Willkommen auf meiner neuen, modernen GitHub Pages Seite. Der Hintergrund ist animiert und dieses Feld sieht aus wie milchiges Glas.</p>
+        <a href="https://github.com/" class="btn" target="_blank">Entdecke mehr</a>
+    </div>
+
+</body>
+</html>
