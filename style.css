@@ -48,7 +48,7 @@ body {
     display: flex;
     gap: 2rem;
     justify-content: center;
-    margin-top: -2rem;
+    margin-top: 0rem; /* Geändert von -2rem auf 2rem für einen sauberen Abstand nach oben */
 }
 
 .recipe-card {
